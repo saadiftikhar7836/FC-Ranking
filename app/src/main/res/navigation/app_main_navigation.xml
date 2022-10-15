@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_main_navigation"
+    app:startDestination="@id/nvRanking">
+
+    <fragment
+        android:id="@+id/nvSearch"
+        android:name="com.codesses.fcranking.views.fragment.SearchFragment"
+        android:label="SearchFragment" />
+
+    <fragment
+        android:id="@+id/nvRanking"
+        android:name="com.codesses.fcranking.views.fragment.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" />
+
+    <fragment
+        android:id="@+id/nvAccount"
+        android:name="com.codesses.fcranking.views.fragment.AccountFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.codesses.fcranking.views.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <argument
+            android:name="user_id"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="parent_fragment"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        android:name="com.codesses.fcranking.views.fragment.FullScreenImageFragment"
+        android:label="FullScreenImageFragment">
+        <argument
+            android:name="url"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/proposeCharacterFragment"
+        android:name="com.codesses.fcranking.views.fragment.ProposeCharacterFragment"
+        android:label="ProposeCharacterFragment">
+        <argument
+            android:name="characterRequest"
+            android:defaultValue="@null"
+            app:argType="com.codesses.fcranking.model.Characters"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterRequestsFragment"
+        android:name="com.codesses.fcranking.views.fragment.CharacterRequestsFragment"
+        android:label="fragment_character_requests"
+        tools:layout="@layout/fragment_character_requests" />
+
+    <fragment
+        android:id="@+id/notificationsFrament"
+        android:name="com.codesses.fcranking.views.fragment.NotificationsFrament"
+        android:label="fragment_notifications_frament"
+        tools:layout="@layout/fragment_notifications" />
+
+    <dialog
+        android:id="@+id/photoBottomSheet"
+        android:name="com.codesses.fcranking.views.bottomsheet.PhotoBottomSheet"
+        android:label="PhotoBottomSheet">
+        <argument
+            android:name="type"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="url"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </dialog>
+    <fragment
+        android:id="@+id/characterProfileFragment"
+        android:name="com.codesses.fcranking.views.fragment.CharacterProfileFragment"
+        android:label="CharacterProfileFragment">
+        <argument
+            android:name="character"
+            app:argType="com.codesses.fcranking.model.Characters" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/commentsBottomSheet"
+        android:name="com.codesses.fcranking.views.fragment.CommentsFragment"
+        android:label="comment_bottom_sheet"
+        tools:layout="@layout/fragment_comments">
+
+        <argument
+            android:name="characterId"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/replyFragment"
+        android:name="com.codesses.fcranking.views.fragment.ReplyFragment"
+        android:label="fragment_reply"
+        tools:layout="@layout/fragment_reply">
+        <argument
+            android:name="characterId"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="comment"
+            android:defaultValue="@null"
+            app:argType="com.codesses.fcranking.model.Comments"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myRequestsFragment"
+        android:name="com.codesses.fcranking.views.fragment.MyRequestsFragment"
+        android:label="MyRequestsFragment" />
+
+
+    <action
+        android:id="@+id/action_characterProfileFragment_to_commentsBottomSheet"
+        app:destination="@id/commentsBottomSheet" />
+
+    <action
+        android:id="@+id/action_characterRequestsFragment_to_proposeCharacterFragment"
+        app:destination="@id/proposeCharacterFragment" />
+
+    <action
+        android:id="@+id/action_proposeCharacterFragment_to_fullScreenImageFragment"
+        app:destination="@id/fullScreenImageFragment" />
+
+    <action
+        android:id="@+id/action_profileFragment_to_fullScreenImageFragment"
+        app:destination="@id/fullScreenImageFragment" />
+
+    <action
+        android:id="@+id/action_profileFragment_to_photoBottomSheet"
+        app:destination="@id/photoBottomSheet" />
+
+    <action
+        android:id="@+id/action_nvAccount_to_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <action
+        android:id="@+id/action_nvAccount_to_proposeCharacterFragment"
+        app:destination="@id/proposeCharacterFragment" />
+
+    <action
+        android:id="@+id/action_nvAccount_to_characterRequestsFragment"
+        app:destination="@id/characterRequestsFragment" />
+
+    <action
+        android:id="@+id/action_nvAccount_to_notificationsFrament"
+        app:destination="@id/notificationsFrament" />
+
+    <action
+        android:id="@+id/action_commentsBottomSheet_to_replyFragment"
+        app:destination="@id/replyFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <action
+        android:id="@+id/action_nvSearch_to_characterProfileFragment"
+        app:destination="@id/characterProfileFragment" />
+
+    <action
+        android:id="@+id/action_nvRanking_to_characterProfileFragment"
+        app:destination="@id/characterProfileFragment" />
+
+    <action
+        android:id="@+id/action_profileFragment_to_characterProfileFragment"
+        app:destination="@id/characterProfileFragment" />
+
+    <action
+        android:id="@+id/action_characterProfileFragment_to_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <action
+        android:id="@+id/action_nvAccount_to_myRequestsFragment"
+        app:destination="@id/myRequestsFragment" />
+
+    <action
+        android:id="@+id/action_characterProfileFragment_to_fullScreenImageFragment"
+        app:destination="@id/fullScreenImageFragment" />
+
+    <action
+        android:id="@+id/action_commentsBottomSheet_to_profileFragment"
+        app:destination="@id/profileFragment" />
+</navigation>

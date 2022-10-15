@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.fragment.CommentsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?android:actionBarItemBackground"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/comments"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_back_press"
+                app:layout_constraintStart_toEndOf="@id/iv_back_press"
+                app:layout_constraintTop_toTopOf="@id/iv_back_press" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/clCommentBoxLayout"
+            app:layout_constraintTop_toBottomOf="@id/conToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentTop="true"
+                    app:layout_constraintBottom_toTopOf="@id/progressBar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/layout_item_character_comments" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:indeterminateTint="@color/grey4"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCommentBoxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/Transparent"
+            android:maxHeight="@dimen/_150sdp"
+            android:minHeight="@dimen/_50sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ivSelectImage"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="?actionBarItemBackground"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_photo"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivGif"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="?actionBarItemBackground"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/drawable_gif"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@id/ivSelectImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etCommentBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/outlined_white_background_rounded"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_leave_opinion"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:minHeight="@dimen/_35sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toStartOf="@id/ivPostComment"
+                app:layout_constraintStart_toEndOf="@id/ivGif"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivPostComment"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="?android:actionBarItemBackground"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/dimGrey" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivSelectedImage"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:elevation="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/square_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCommentBox"
+                app:riv_border_color="@color/grey0"
+                app:riv_border_width="@dimen/_1sdp"
+                app:riv_corner_radius="@dimen/_10sdp" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/givGif"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_8sdp"
+                android:elevation="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etCommentBox" />
+
+
+            <ImageView
+                android:id="@+id/ivCrossImage"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:elevation="@dimen/_10sdp"
+                android:src="@drawable/ic_cross"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/ivSelectedImage"
+                app:layout_constraintTop_toTopOf="@id/ivSelectedImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

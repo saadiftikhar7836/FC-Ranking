@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey0"
+        tools:context=".views.fragment.ProposeCharacterFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="?android:actionBarItemBackground"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_back_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center_vertical"
+                android:text="@string/propose_character"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@id/btnBack"
+                app:layout_constraintStart_toEndOf="@id/btnBack"
+                app:layout_constraintTop_toTopOf="@id/btnBack" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conToolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgCharacterImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="?selectableItemBackground"
+                    android:minHeight="@dimen/_200sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/add_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/_10sdp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clInputFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/imgCharacterImage">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etCharacterName"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:textColorHint="@color/colorBlackLighter"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxCornerRadiusBottomEnd="@dimen/_25sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_25sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_25sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_25sdp"
+                        app:boxStrokeColor="@color/navy"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconContentDescription="correct"
+                        app:endIconDrawable="@drawable/ic_icon_alert_valid"
+                        app:endIconMode="none"
+                        app:endIconTint="@color/dimGreen"
+                        app:errorIconDrawable="@drawable/ic_icon_alert_invalid"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCharacterNameField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:hint="@string/character_name"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_12sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:textColor="@color/navy"
+                            android:textSize="@dimen/_10ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etShowName"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:textColorHint="@color/colorBlackLighter"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxCornerRadiusBottomEnd="@dimen/_25sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_25sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_25sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_25sdp"
+                        app:boxStrokeColor="@color/navy"
+                        app:boxStrokeWidth="0dp"
+                        app:endIconContentDescription="correct"
+                        app:endIconDrawable="@drawable/ic_icon_alert_valid"
+                        app:endIconMode="none"
+                        app:endIconTint="@color/dimGreen"
+                        app:errorIconDrawable="@drawable/ic_icon_alert_invalid"
+                        app:hintEnabled="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/etCharacterName">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etShowNameField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autofillHints="null"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:hint="@string/show_name"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_12sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:textColor="@color/navy"
+                            android:textSize="@dimen/_10ssp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/btnSubmit"
+                    style="@style/unselected_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:enabled="false"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clInputFields"
+                    app:layout_constraintVertical_bias="0.87" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conAcceptReject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clInputFields"
+                    app:layout_constraintVertical_bias="0.89">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAccept"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/bg_cta_button"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:gravity="center"
+                        android:text="@string/accept"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btnReject" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReject"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/bg_cta_button"
+                        android:backgroundTint="@color/paleLilac"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:gravity="center"
+                        android:text="@string/reject"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btnAccept"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

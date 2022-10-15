@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground">
+
+        <TextView
+            android:id="@+id/tvCharacterRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/basier_circle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgCharacterImage"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/circle_grey"
+            app:layout_constraintStart_toEndOf="@id/tvCharacterRank"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCharacterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:textColor="@color/charcoal"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/ivRankVariation"
+            app:layout_constraintStart_toEndOf="@id/imgCharacterImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Spider Man" />
+
+        <TextView
+            android:id="@+id/tvShowName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toStartOf="@id/ivRankVariation"
+            app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+            app:layout_constraintTop_toBottomOf="@id/tvCharacterName"
+            tools:text="Spider Man" />
+
+        <ImageView
+            android:id="@+id/ivRankVariation"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:rotation="90"
+            android:src="@drawable/ic_arrow_green"
+            app:layout_constraintBottom_toBottomOf="@id/imgCharacterImage"
+            app:layout_constraintEnd_toStartOf="@id/tvRankVariation"
+            app:layout_constraintTop_toTopOf="@id/imgCharacterImage" />
+
+        <TextView
+            android:id="@+id/tvRankVariation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="+1"
+            android:textColor="@color/color_application"
+            android:textSize="@dimen/_7ssp"
+            app:layout_constraintBottom_toTopOf="@id/ivRankVariation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivRankVariation" />
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/grey0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imgCharacterImage"
+            app:layout_constraintTop_toBottomOf="@id/tvShowName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgCharacterImage"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/circle_grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llCharacterDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/imgCharacterImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgCharacterImage"
+            app:layout_constraintTop_toTopOf="@id/imgCharacterImage">
+
+            <TextView
+                android:id="@+id/tvCharacterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basier_circle"
+                android:text="Spider man"
+                android:textColor="@color/charcoal"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvShowName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basier_circle"
+                android:text="Spider man"
+                android:textColor="@color/black5"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgCharacterImage" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basiercircle_regular"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintEnd_toEndOf="@id/tv_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+        <TextView
+            android:id="@+id/tvViewRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_cta_button"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/view_request"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey4"
+            app:layout_constraintTop_toBottomOf="@id/tvViewRequest" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

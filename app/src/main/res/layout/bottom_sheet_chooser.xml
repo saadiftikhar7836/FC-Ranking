@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_shape">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#505153"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conViewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toBottomOf="@id/line1">
+
+            <ImageView
+                android:id="@+id/imgViewPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/drawable_background"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_photo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvViewPhoto"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="center_vertical"
+                android:text="View profile photo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@id/imgViewPhoto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conUploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toBottomOf="@id/conViewPhoto">
+
+            <ImageView
+                android:id="@+id/imgUploadPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/drawable_background"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_upload"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvUploadPhoto"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="center_vertical"
+                android:text="Upload profile photo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@id/imgUploadPhoto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

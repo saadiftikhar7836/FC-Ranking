@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_application">@color/color_grey_purple</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="colorPrimary">@color/color_application</color>
+    <color name="colorPrimaryVariant">@color/color_application</color>
+    <color name="teal_200">@color/color_application</color>
+    <color name="teal_700">@color/color_application</color>
+
+    <color name="purple_500">@color/color_application</color>
+    <color name="purple_700">@color/transparent_green</color>
+    <color name="primaryDark">#006400</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="grey0">#f7f7f8</color>
+    <color name="grey2">#99A0AF</color>
+    <color name="grey4">#CCD0D7</color>
+    <color name="grey1">#979696</color>
+    <color name="grey5">#E0E0E0</color>
+    <color name="colorBlackLighter">#50001236</color>
+    <color name="steel">#7b8497</color>
+    <color name="colorPaleLilacTwo">#e7e7ea</color>
+    <color name="dim_brown">#AA8364</color>
+    <color name="charcoal">#36454F</color>
+    <color name="black0">#17202A</color>
+    <color name="black1">#1C2833</color>
+    <color name="black2">#212F3D</color>
+    <color name="black5">#566573</color>
+    <color name="dim_grey">#C0C0C0</color>
+
+    <color name="colorRed">#ff005c</color>
+    <color name="colorDarkRed">#BF1319</color>
+
+
+    <drawable name="option_on">@color/dimGrey</drawable>
+    <drawable name="option_off">@color/Transparent</drawable>
+
+    <color name="transparent_black">#50000000</color> <!--    almost 30% transparent-->
+    <color name="colorShimmer">#dddddd</color>
+    <color name="bluePastel">#c3ecff</color>
+    <color name="transparent_green">#501C7716</color>
+    <color name="dimGreen">#93B65F</color>
+    <color name="color_green">#1C7716</color>
+    <color name="pastelGreen">#73D673</color>
+    <color name="transparentPastelGreen">#f1fff1</color>
+    <color name="transparentGreen">#dfd</color>
+    <color name="colorAquaMarine">#3ed2c9</color>
+    <color name="darkGray">#3E3E3E</color>
+    <color name="gray">#6E6865</color>
+    <color name="navy">#001236</color>
+    <color name="paleLilac">#e6e6e9</color>
+    <color name="hyperLink">#0645AD</color>
+    <color name="blue">#134D80</color>
+    <color name="wineRed">#722F37</color>
+    <color name="Red">#FF0000</color>
+    <color name="DimParrot">#F0F7DA</color>
+    <color name="Parrot">#6CB015</color>
+    <color name="Yellow">#F4D03F</color>
+    <color name="GreyBrown">#707054</color>
+    <color name="color_grey_purple">#616191</color>
+    <color name="dimGrey">#E5E5E5</color>
+    <color name="NavyBlue">#000080</color>
+    <color name="Transparent">#00000000</color>
+    <color name="Charcoal">#36454F</color>
+    <color name="Orange">#FF4500</color>
+    <color name="SkyBlue">#03A9F4</color>
+    <color name="Outline">#EEEEEE</color>
+    <color name="Gray">#D3D3D3</color>
+    <color name="grey6">#babfc4</color>
+
+    <color name="tt_bg1">#E6E6FA</color>
+    <color name="tt_bg2">#FFF8DC</color>
+    <color name="tt_bg3">#E0FFFF</color>
+    <color name="tt_bg4">#FFFFE0</color>
+    <color name="tt_bg5">#f7f7f8</color>
+    <color name="tt_bg6">#ffe9ec</color>
+    <color name="tt_bg7">#ffebeb</color>
+    <color name="tt_bg8">#ebf5ff</color>
+    <color name="tt_bg9">#ffebf5</color>
+    <color name="tt_bg10">#f9f9db</color>
+
+    <color name="gph_channel_color_light">#FF4E4E4E</color>
+    <color name="gph_handle_bar_light">#ff888888</color>
+    <color name="gph_background_light">#ffF1F1F1</color>
+    <color name="gph_text_color_light">#ffA6A6A6</color>
+    <color name="gph_active_text_color_light">#ff000000</color>
+
+    <color name="gph_channel_color_dark">#ffD8D8D8</color>
+    <color name="gph_handle_bar_dark">#ff888888</color>
+    <color name="gph_background_dark">#ff121212</color>
+    <color name="gph_text_color_dark">#ffA6A6A6</color>
+    <color name="gph_active_text_color_dark">#ff00FF99</color>
+
+    <color name="yellowGradient">#AAF4D03F</color>
+
+    <color name="colorBluePastel">#c3ecff</color>
+    <color name="colorOrangePastel">#F8EEE0</color>
+    <color name="colorGreenPastel">#E6FDFB</color>
+    <color name="colorPastelRed">#F8A0A0</color>
+    <color name="colorStatusGreen">#3ed2c9</color>
+    <color name="colorStatusBlue">#00b2ff</color>
+    <color name="colorStatusRed">#BF1319</color>
+
+</resources>

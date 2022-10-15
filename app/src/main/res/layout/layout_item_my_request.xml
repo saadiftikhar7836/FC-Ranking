@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/drawable_rounded_background_bg"
+        android:paddingBottom="@dimen/_10sdp"
+        android:translationZ="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgCharacterImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/square_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius_top_left="@dimen/_10sdp"
+            app:riv_corner_radius_top_right="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvCharacterName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:padding="0dp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:textColor="@color/charcoal"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@id/tvStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgCharacterImage"
+            tools:text="Spider man" />
+
+        <TextView
+            android:id="@+id/tvShowName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/basier_circle"
+            android:padding="0dp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:textColor="@color/black5"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/tvStatus"
+            app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+            app:layout_constraintTop_toBottomOf="@id/tvCharacterName"
+            tools:text="Spider man season 4" />
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/basier_circle"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+            app:layout_constraintTop_toBottomOf="@id/tvShowName"
+            tools:text="@string/dummy_date" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:text="Pending"
+            android:textColor="@color/Orange"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCharacterName"
+            app:layout_constraintTop_toTopOf="@id/tvCharacterName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

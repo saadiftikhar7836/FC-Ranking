@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="?android:selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_character_profile"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/circle_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_character_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@id/civ_character_profile"
+                app:layout_constraintTop_toTopOf="@id/civ_character_profile"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/tv_show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basier_circle"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintStart_toStartOf="@id/tv_character_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_character_name"
+                tools:text="Name" />
+
+            <ImageView
+                android:id="@+id/iv_best_ranking"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:rotation="270"
+                android:src="@drawable/ic_arrow_right_small_top"
+                app:layout_constraintBottom_toBottomOf="@id/tv_best_ranking"
+                app:layout_constraintEnd_toStartOf="@id/tv_best_ranking"
+                app:layout_constraintTop_toTopOf="@id/tv_best_ranking"
+                app:tint="@color/color_application" />
+
+            <TextView
+                android:id="@+id/tv_best_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basier_circle"
+                android:textColor="@color/color_green"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/civ_character_profile"
+                tools:text="BR: 12" />
+
+            <ImageView
+                android:id="@+id/iv_worst_ranking"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:rotation="90"
+                android:src="@drawable/ic_arrow_right_small_top"
+                app:layout_constraintBottom_toBottomOf="@id/tv_worst_ranking"
+                app:layout_constraintEnd_toStartOf="@id/tv_worst_ranking"
+                app:layout_constraintTop_toTopOf="@id/tv_worst_ranking"
+                app:tint="@color/Red" />
+
+            <TextView
+                android:id="@+id/tv_worst_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/basier_circle"
+                android:textColor="@color/Red"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_best_ranking"
+                tools:text="WR: 12" />
+
+            <TextView
+                android:id="@+id/tv_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/basier_circle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_worst_ranking"
+                tools:text="R: 12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

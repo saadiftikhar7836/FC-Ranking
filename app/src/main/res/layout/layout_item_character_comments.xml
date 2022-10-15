@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:translationZ="@dimen/_3sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserProfileImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/circle_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="?selectableItemBackground"
+                android:fontFamily="@font/basiercircle_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toEndOf="@id/civUserProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/civUserProfileImage"
+                tools:text="@string/dummy_name" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCommentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@id/civUserProfileImage">
+
+                <TextView
+                    android:id="@+id/tvCommentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:maxWidth="@dimen/_150sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:textColor="@color/darkGray"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/dummy_text" />
+
+                <ImageView
+                    android:id="@+id/ivCommentImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/square_grey"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCommentText"
+                    app:riv_border_color="@color/grey0" />
+
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/givGif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCommentText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/grey4"
+                app:layout_constraintTop_toBottomOf="@id/clCommentDetails" />
+
+            <LinearLayout
+                android:id="@+id/llLike"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@id/llComment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_like_stroke" />
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llComment"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/llLike"
+                app:layout_constraintTop_toBottomOf="@id/view">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_comment"
+                    app:tint="@color/grey4" />
+
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:gravity="center"
+                    android:text="@string/replies"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:textColor="@color/grey1"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintStart_toStartOf="@id/tvUsername"
+                app:layout_constraintTop_toBottomOf="@id/tvUsername"
+                tools:text="@string/dummy_date" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

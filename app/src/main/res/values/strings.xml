@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">FC Ranking</string>
+
+    <!--    TODO: Splash Screen  -->
+    <string name="develop_by">Developed By</string>
+    <string name="codesses">Codesses</string>
+
+    <!--    TODO: Authentication  -->
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+
+
+    <!--    TODO: Labels  -->
+    <string name="label_create_account">Create account</string>
+    <string name="label_already_have_account">Already have an account?</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_new_user">New user?</string>
+    <string name="label_create_an_acc">Create an account?</string>
+    <string name="label_send_email">Send email</string>
+    <string name="label_cancel">cancel</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_account">Account</string>
+
+
+    <!--    TODO: Authentication: User Sign In  -->
+    <string name="user">User</string>
+    <string name="user_role">user</string>
+    <string name="court_owner_role">court</string>
+    <string name="court_owner">Sports Complex</string>
+    <string name="forgot_pass">forgot password?</string>
+    <string name="no_acc"><u>New Here? Create an account</u></string>
+    <string name="check_email">Please Check Your Email</string>
+
+
+    <!--    TODO: Authentication: User Sign Up  -->
+    <string name="name">Name</string>
+    <string name="full_name">Full Name *</string>
+    <string name="email">E-mail</string>
+    <string name="phone_no">Phone Number</string>
+    <string name="ur_sport">Your Sports</string>
+    <string name="pass">Password *</string>
+    <string name="cnfm_pass">Confirm Password *</string>
+    <string name="back">Back</string>
+
+    <!--    TODO: Hints -->
+    <string name="hint_email_address">Email Address *</string>
+    <string name="hint_password">Password *</string>
+    <string name="hint_password_first">Password must be a minimum of&#160;</string>
+    <string name="hint_password_second">8 characters</string>
+    <string name="hint_password_third">and contains both&#160;</string>
+    <string name="hint_password_fourth">numbers&#160;</string>
+    <string name="hint_password_fifth">and&#160;</string>
+    <string name="hint_password_sixth">letters</string>
+    <string name="hint_cnfm_password">Confirm Password *</string>
+    <string name="hint_tell_your_exp">Tell us about your experience * (max 200)</string>
+    <string name="hint_title">Title *</string>
+    <string name="hint_leave_opinion">Leave a opinion</string>
+    <string name="hint_enter_comment">Enter comment</string>
+
+    <!--    TODO: Messages -->
+    <string name="enter">Enter</string>
+
+    <string name="pass_not_match">Password do not match</string>
+    <string name="pass_must_match">New password must be different</string>
+    <string name="creating_acc">Your account is being created.</string>
+    <string name="signing_in">Signing In…</string>
+    <string name="email_verify_msg">"Verification email sent to your email id. Please verify before login"</string>
+    <string name="pass_updated">Password updated successfully</string>
+    <string name="profile_updated">Profile updated successfully</string>
+    <string name="title_you_re_a">You\'re a</string>
+    <string name="invalid_first_name">Invalid first name</string>
+    <string name="invalid_owner_name">Invalid owner name</string>
+    <string name="invalid_last_name">Invalid last name</string>
+    <string name="invalid_court_name">Invalid court name</string>
+    <string name="invalid_character_name">Invalid character name</string>
+    <string name="invalid_email_format">Email is not correctly formatted</string>
+    <string name="invalid_contact_no_format">Contact number is not correctly formatted</string>
+    <string name="invalid_password_format">Password not correctly formatted</string>
+    <string name="invalid_address_format">Address not correctly formatted</string>
+    <string name="password_required">Password required</string>
+    <string name="invalid_confirm_password_format">Confirm password not correctly formatted</string>
+    <string name="no_user_found_against_email">No user found against this email</string>
+    <string name="not_available">Not available</string>
+    <string name="something_went_wrong">" Something is wrong, try again later …"</string>
+
+    <!--    TODO: Authentication: Forgot Password  -->
+    <string name="reset_pass">Reset Password</string>
+
+    <!--    TODO: Utils-->
+    <string name="cancel">Cancel</string>
+    <string name="update_pass">Update Password</string>
+    <string name="edit">Edit</string>
+    <string name="old_pass">Old Password</string>
+    <string name="new_pass">New Password</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_home">Search Home</string>
+    <string name="search">Search</string>
+    <string name="ranking">Ranking</string>
+    <string name="me">Me</string>
+    <string name="profile">Profile</string>
+    <string name="account">Account</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="change_password">Change password</string>
+    <string name="propose_character">Propose character</string>
+    <string name="general_policies">General policies</string>
+    <string name="text_logout_surety">"Are you sure you want to log out? "</string>
+    <string name="data_updated_successfully">data updated successfully</string>
+    <string name="change_pass">Change password</string>
+    <string name="user_name">User name</string>
+    <string name="favourite_character">Favourite character</string>
+    <string name="recent_votes">Recent votes</string>
+    <string name="followers">Followers</string>
+    <string name="follows">Follows</string>
+    <string name="follow">Follow</string>
+    <string name="un_follow">Unfollow</string>
+    <string name="following">Following</string>
+    <string name="comments">Comments</string>
+    <string name="replies">%s replies</string>
+    <string name="title_replies">Replies</string>
+    <string name="spider_man">Spider man</string>
+    <string name="image">Image</string>
+    <string name="character_name">Character name *</string>
+    <string name="submit">Submit</string>
+    <string name="character_profile">Character Profile</string>
+    <string name="write_your_comment">Write your comment</string>
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+    <string name="show_name">Show name *</string>
+    <string name="data_uploaded_successfully">data uploaded successfully</string>
+    <string name="character_requests">Character requests</string>
+    <string name="view_request">View request</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="no_character_request_found">No character request found</string>
+    <string name="choose">Choose</string>
+    <string name="my_requests">My requests</string>
+    <string name="at_date_time">%s at %s</string>
+
+    <string name="title_name">Name</string>
+    <string name="title_show">Show</string>
+    <string name="title_best_rank">Best R</string>
+    <string name="title_worst_rank">Worst R</string>
+    <string name="title_rank">Rank</string>
+    <string name="votes">votes</string>
+    <string name="label_ranking">Rankings</string>
+    <string name="show_thread">Show this thread</string>
+
+    <string name="favourite_character_limitation">You can\'t add more than 3 characters as favourite</string>
+    <string name="no_favorite_character">There is no favourite character</string>
+
+    <!--    TODO: Dummy States-->
+    <string name="dummy_name">John Napier</string>
+    <string name="dummy_phone_no">+923456789101</string>
+    <string name="dummy_email">abc@gmail.com</string>
+    <string name="dummy_text">With people always on their phones, text messages are the easiest way to engage customers quickly. It’s simple, fast and is the most efficient form of customer communication today.</string>
+    <string name="dummy_date">Thur 15 Mar 21</string>
+    <string name="dummy_time_ago">1m</string>
+    <string name="dummy_time">11:12 pm</string>
+    <string name="dummy_time_range">11:00 am - 2:00 pm</string>
+    <string name="dummy_address">251 A, Ali street, Model town link road, lahore</string>
+    <string name="dummy_price">Rs 4000/-</string>
+    <string name="like">like</string>
+    <string name="reply">reply</string>
+    <string name="vote_here">vote here</string>
+    <string name="no_recent_character">There is no recent votes character</string>
+    <string name="no_character_found">no characters found</string>
+    <string name="vote_has_been_counted">Your vote has been counted</string>
+    <string name="character_proposed_successfully">character proposed successfully</string>
+    <string name="character_posted_successfully">character posted successfully</string>
+
+    <!--    plurals -->
+    <plurals name="like">
+        <item quantity="zero">like</item>
+        <item quantity="one">%s like</item>
+        <item quantity="other">%s likes</item>
+    </plurals>
+    <plurals name="reply">
+        <item quantity="zero">reply</item>
+        <item quantity="one">%s reply</item>
+        <item quantity="other">%s replies</item>
+    </plurals>
+
+</resources>

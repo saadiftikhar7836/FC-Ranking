@@ -1,0 +1,207 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.fragment.AccountFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/label_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="?android:actionBarItemBackground"
+                android:src="@drawable/ic_logout"
+                app:layout_constraintBottom_toBottomOf="@id/heading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/heading" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/grey0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/heading">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civProfileImage"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@drawable/circle_grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingClass" />
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:fontFamily="@font/basier_circle"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toEndOf="@id/civProfileImage"
+                    app:layout_constraintTop_toTopOf="@id/civProfileImage"
+                    tools:text="Saad Iftikhar" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:textColor="@color/black5"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="@id/tvFullName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFullName"
+                    tools:text="saadbutt7836@gmail.com" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@color/grey4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/civProfileImage"
+                    app:layout_constraintTop_toBottomOf="@id/civProfileImage" />
+
+                <TextView
+                    android:id="@+id/tvEditProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line1" />
+
+                <TextView
+                    android:id="@+id/tvNotifications"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/notifications"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEditProfile" />
+
+                <TextView
+                    android:id="@+id/tvChangePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/change_password"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotifications" />
+
+                <TextView
+                    android:id="@+id/tvCharacterRequests"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/character_requests"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvChangePassword" />
+
+                <TextView
+                    android:id="@+id/tvMyRequests"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/my_requests"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCharacterRequests" />
+
+                <TextView
+                    android:id="@+id/tvProposeCharacter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/propose_character"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMyRequests" />
+
+                <TextView
+                    android:id="@+id/tvPolicies"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:selectableItemBackground"
+                    android:fontFamily="@font/basier_circle"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/general_policies"
+                    android:textColor="@color/charcoal"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProposeCharacter" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
