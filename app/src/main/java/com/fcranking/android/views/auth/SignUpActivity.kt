@@ -17,7 +17,6 @@ import com.fcranking.android.views.dialog.ProgressDialog
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.messaging.FirebaseMessaging
-import java.util.*
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity(), OnFocusChangeListener {
