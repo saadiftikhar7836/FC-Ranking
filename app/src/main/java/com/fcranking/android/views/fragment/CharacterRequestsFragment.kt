@@ -11,10 +11,10 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fcranking.android.R
 import com.fcranking.android.databinding.FragmentCharacterRequestsBinding
+import com.fcranking.android.enums.EnumIntents
 import com.fcranking.android.firestore.FirestoreRef
 import com.fcranking.android.interfaces.RecyclerViewItemClick
 import com.fcranking.android.model.Characters
-import com.fcranking.android.enums.EnumIntents
 import com.fcranking.android.utils.preventDoubleClick
 import com.fcranking.android.utils.showSnackBar
 import com.fcranking.android.views.adapter.CharacterRequestsAdapter
